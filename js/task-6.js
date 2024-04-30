@@ -18,16 +18,14 @@ createBtn.addEventListener('click', () => {
     return;
   }
 
-  boxes.innerHTML = '';
-
+  let div = '';
   for (let i = 0; i < amount; i++) {
-    const div = document.createElement('div');
-    div.style.backgroundColor = getRandomHexColor();
-    div.style.width = 30 + 10 * i + 'px';
-    div.style.height = 30 + 10 * i + 'px';
-    boxes.append(div);
+    const color = getRandomHexColor();
+    const size = 30 + 10 * i + 'px';
+    div += `<div style="width: ${size}; height: ${size}; background-color: ${color}"></div>`;
   }
 
+  boxes.innerHTML = div;
 })
 
 // --------------------------------------------------------

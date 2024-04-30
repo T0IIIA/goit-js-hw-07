@@ -11,5 +11,5 @@ const button = document.querySelector('.change-color');
 
 button.addEventListener('click', () => {
   spanText.textContent = getRandomHexColor();
-  widget.style.backgroundColor = getRandomHexColor();
+  widget.style.backgroundColor = spanText.textContent;
 })
